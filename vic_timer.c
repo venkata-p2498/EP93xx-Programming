@@ -1,3 +1,4 @@
+#include<stdio.h>
 int main(void)
 {
 *leddir=0x03;
