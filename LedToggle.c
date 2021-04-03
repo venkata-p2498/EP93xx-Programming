@@ -1,6 +1,6 @@
 #include<stdio.h>
-#define	led ((volatile unsigned*)(0x80840020))
-#define	leddir ((volatile unsigned*)(0x80840024))
+#define	led((volatile unsigned*)(0x80840020))
+#define	leddir((volatile unsigned*)(0x80840024))
 void delay();
 int main()
 {
