@@ -1,11 +1,11 @@
 #include<stdio.h>
-#define	PWRCNT		((volatile unsigned *)(0x80930004))
-#define	UART_DATA		((volatile unsigned *)(0x808C0000)) 	//DATA TO BE LOADED
-#define	UART_CONTROL_HIGH	((volatile unsigned *)(0x808C0008))	//LENGTH,FIFO..ETC.
-#define	UART_CONTROL_MID	((volatile unsigned *)(0x808C000C))	//BAUD RATE DIVISOR(MSB)
-#define	UART_CONTROL_LOW	((volatile unsigned *)(0x808C0010))	//BAUD RATE DIVISOR(LSB)
-#define	UART_CONTROL	((volatile unsigned *)(0x808C0014))	//INTERRUPT, "UART ENABLE"...ETC.
-#define	UART_FLAG		((volatile unsigned *)(0x808C0018))	//FLAGS
+#define	PWRCNT((volatile unsigned *)(0x80930004))
+#define	UART_DATA((volatile unsigned *)(0x808C0000)) 		//DATA TO BE LOADED
+#define	UART_CONTROL_HIGH((volatile unsigned *)(0x808C0008))	//LENGTH,FIFO..ETC.
+#define	UART_CONTROL_MID((volatile unsigned *)(0x808C000C))	//BAUD RATE DIVISOR(MSB)
+#define	UART_CONTROL_LOW((volatile unsigned *)(0x808C0010))	//BAUD RATE DIVISOR(LSB)
+#define	UART_CONTROL((volatile unsigned *)(0x808C0014))		//INTERRUPT, "UART ENABLE"...ETC.
+#define	UART_FLAG((volatile unsigned *)(0x808C0018))		//FLAGS
 unsigned char s[]=“EP9315 UART";
 
 int main(void)
