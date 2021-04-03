@@ -14,7 +14,7 @@ int i,j=0;
 
 void main()
 {
-    *i2stx0enb  = 0x00;
+    	*i2stx0enb  = 0x00;
 	*i2stxctrl = 0x00;
 	*i2stxlncon=0x04;
 	*i2stx_wdlen = 0x00;
@@ -25,11 +25,11 @@ void main()
 	{  if(j>25)
 	    {j=0;}
 	  for(i=j;i<(j+8);i++)
-	{ *i2stx0lt = data[i];
+	{ 
+	  *i2stx0lt = data[i];
 	  *i2stx0rt = data[i];
 	  j++;
 	 }  
-	 
 	*i2stx0enb  = 0x01;
 	while((*i2sglob_sts&0x01)!=0x01);
 	*i2stx0enb  = 0x00;
