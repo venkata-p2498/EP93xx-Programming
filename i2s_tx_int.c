@@ -14,9 +14,10 @@ int data[40] = {0x20,0x28,0x30,0x37,0x3c,0x3f,0x40,0x3f,0x3c,0x37,0x30,0x28,0x20
 int i,j=0;
 
 void main()
-{   *i2sclockdiv = (*i2sclockdiv)&(0xdfffffff);
+{   
+	*i2sclockdiv = (*i2sclockdiv)&(0xdfffffff);
 	*i2dev_config = 0x80;
-    *i2stx0enb  = 0x00;
+        *i2stx0enb  = 0x00;
 	*i2stxctrl = 0x00;
 	*i2stxlncon=0x04;
 	*i2stx_wdlen = 0x00;
@@ -30,11 +31,8 @@ void main()
 	{ *i2stx0lt = data[i];
 	  *i2stx0rt = data[i];}
 	  j++;
-	   
-	 
 	*i2stx0enb  = 0x01;
 	while((*i2sglob_sts&0x01)!=0x01);
 	*i2stx0enb  = 0x00;
     }	 
-	
 }
